@@ -16,11 +16,10 @@ This tool automatically generates realistic product mockups by:
 Here are some examples of mockups generated with this tool:
 
 ### Generated Mockups:
+- ![Mockup (WSL Shell)](final_shell.jpg) - Generated via Linux shell (WSL2 Ubuntu)
 - ![Mockup 1](final_js2.jpg) - Basic mockup with sample artwork
 - ![Mockup 2](final_js2_1.jpg) - Mockup with different artwork placement
 - ![Mockup 3](final_js2_2.jpg) - Mockup with enhanced lighting effects
-- ![Mockup 4](final_js2_3.jpg) - Mockup with optimized color adjustment
-
 *These images demonstrate the tool's ability to create realistic product mockups with proper perspective, lighting, and texture effects.*
 
 ## 📋 Prerequisites
@@ -71,6 +70,27 @@ magick "base_images\template.jpg" `( -clone 0 -fill "#f1f1f1" -colorize 100 `) "
 # Run the Windows-optimized script
 node create_mockup_windows.js
 ```
+
+### ▶️ WSL2 Ubuntu (Linux) Quick Run
+
+If you are using WSL2 Ubuntu and want to generate a mockup directly from the Linux shell, use the provided script:
+
+```bash
+# Ensure the script is executable
+chmod +x generate_mockup.sh
+
+# Run with your actual files
+./generate_mockup.sh \
+  base_images/template.jpg \
+  base_images/mask.png \
+  swatches/art24.jpg \
+  maps/displacement_map.png \
+  maps/lighting_map.png \
+  maps/adjustment_map.jpg \
+  final_shell.jpg
+```
+
+This will generate `final_shell.jpg`, which you can find in the project root.
 
 ## 📁 File Structure
 

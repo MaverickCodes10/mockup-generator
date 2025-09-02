@@ -58,24 +58,36 @@ async function generateMockup(params) {
   fs.unlinkSync(tmp);
 }
 
+// function execShellCommand(command) {
+//   return new Promise((resolve, reject) => {
+//     try {
+//       execSync(command);
+//       resolve();
+//     } catch (error) {
+//       reject(error);
+//     }
+//   });
+// }
 function execShellCommand(command) {
-  return new Promise((resolve, reject) => {
-    try {
-      execSync(command);
-      resolve();
-    } catch (error) {
-      reject(error);
-    }
-  });
-}
+    return new Promise((resolve, reject) => {
+      try {
+        execSync(command, { shell: '/bin/bash' });
+        resolve();
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
 
 mockups = {
-  'out': "final_js2.jpg",
-  'artwork': "art24.png",
-  'template': 'template.png',
-  'mask': 'mask.png',
-  'displacementMap': 'displacement.png',
-  'lightingMap': 'lighting.png',
-  'adjustmentMap': 'adjust.png'}
+    'out': "final_js12.jpg",
+    'artwork': "swatches/art24.jpg",
+    'template': 'base_images/template.jpg',
+    'mask': 'base_images/mask.png',
+    'displacementMap': 'maps/displacement_map.png',
+    'lightingMap': 'maps/lighting_map.png',
+    'adjustmentMap': 'maps/adjustment_map.jpg'
+  }
 
 generateMockup(mockups)
