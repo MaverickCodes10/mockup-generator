@@ -42,7 +42,7 @@ Here are some examples of mockups generated with this tool:
 # Clone the repository
 git clone https://github.com/your-username/product-mockup-generator.git
 cd product-mockup-generator
-
+cd /home/anya/mockup_scripts
 # Navigate to the mockup directory
 cd mockup
 ```
