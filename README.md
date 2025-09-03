@@ -34,7 +34,7 @@ Here are some examples of mockups generated with this tool:
 3. **IMPORTANT**: During installation, check **"Add to system PATH"**
 4. Restart your terminal/command prompt after installation
 5. Verify installation: `magick -version`
-
+6. Fix permission erorr for the whole setup: sudo chown -R $USER:$USER .
 ## 🚀 Quick Start
 
 ### Step 1: Clone and Setup
